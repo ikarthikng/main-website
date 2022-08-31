@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import type { NextPage } from "next"
 import Head from "next/head"
-import { Typography, Box, IconButton } from "@mui/material"
+import { Typography, Box, IconButton, Grid, Chip } from "@mui/material"
 import MenuIcon from "@mui/icons-material/Menu"
 import MuiDrawer from "@mui/material/Drawer"
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar"
@@ -17,7 +17,8 @@ import SchoolRoundedIcon from "@mui/icons-material/SchoolRounded"
 import PsychologyRoundedIcon from "@mui/icons-material/PsychologyRounded"
 import InterestsRoundedIcon from "@mui/icons-material/InterestsRounded"
 import EmojiEventsRoundedIcon from "@mui/icons-material/EmojiEventsRounded"
-import { ListItemComponent } from "./components/ListItemComponent"
+import { ListItemComponent } from "../components/ListItemComponent"
+import { ExperienceComponent } from "../components/ExperienceComponent"
 
 const drawerWidth = 240
 
@@ -146,12 +147,23 @@ const Home: NextPage = () => {
         </Drawer>
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <DrawerHeader />
-          <Typography paragraph>
+          <Typography variant="body1" display="block" gutterBottom>
             Meticulous, hardworking software professional with 7+ years of experience and proven knowledge of software
             development, programming, design, testing, and troubleshooting systems in healthcare, retail, insurance and
             finance. Ardent about problem-solving with a master's degree in Computer Science from The University of
             Texas at Arlington.
           </Typography>
+          <Divider>
+            <Chip
+              sx={{ fontSize: "1.2rem", padding: "0.5em" }}
+              color="info"
+              icon={<WorkHistoryRoundedIcon />}
+              label="Experience"
+            />
+          </Divider>
+          <Grid mt={1} container spacing={2}>
+            <ExperienceComponent />
+          </Grid>
         </Box>
       </Box>
     </>

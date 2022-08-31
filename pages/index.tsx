@@ -19,6 +19,7 @@ import InterestsRoundedIcon from "@mui/icons-material/InterestsRounded"
 import EmojiEventsRoundedIcon from "@mui/icons-material/EmojiEventsRounded"
 import { ListItemComponent } from "../components/ListItemComponent"
 import { ExperienceComponent } from "../components/ExperienceComponent"
+import { EducationComponent } from "../components/EducationComponent"
 
 const drawerWidth = 240
 
@@ -155,7 +156,7 @@ const Home: NextPage = () => {
           </Typography>
           <Divider>
             <Chip
-              sx={{ fontSize: "1.2rem", padding: "0.5em" }}
+              sx={{ fontSize: "1.2rem", padding: "0.5em", margin: "0.5em" }}
               color="info"
               icon={<WorkHistoryRoundedIcon />}
               label="Experience"
@@ -164,6 +165,15 @@ const Home: NextPage = () => {
           <Grid mt={1} container spacing={2}>
             <ExperienceComponent />
           </Grid>
+          <Divider>
+            <Chip
+              sx={{ fontSize: "1.2rem", padding: "0.5em", margin: "0.75em" }}
+              color="info"
+              icon={<SchoolRoundedIcon />}
+              label="Education"
+            />
+          </Divider>
+          <EducationComponent />
         </Box>
       </Box>
     </>
